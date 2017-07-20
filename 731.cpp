@@ -1,3 +1,19 @@
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+	int a, b, i, cnt=0;
+	scanf("%d %d", &a, &b);
+	cnt = b - a + 1;
+	/*for(i=sqrt(a); i * i <= b; i++)
+	{
+		if(i * i >= a) cnt--; //제곱수는 제외 
+	}
+	printf("%ld", cnt);*/
+	printf("%d\n", b-a+1-((int)sqrt(b)-(int)sqrt(a-1)));
+}
+
 /*#include <stdio.h>
 
 int main()
@@ -18,17 +34,3 @@ int main()
 	
 }*/
 
-#include <stdio.h>
-#include <math.h>
-
-int main()
-{
-	int a, b, i, cnt=0;
-	scanf("%d %d", &a, &b);
-	cnt = b - a + 1;
-	for(i=sqrt(a); i * i <= b; i++)
-	{
-		if(i * i >= a) cnt--; //제곱수는 제외 
-	}
-	printf("%ld", cnt);
-}
